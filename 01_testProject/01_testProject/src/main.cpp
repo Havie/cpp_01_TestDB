@@ -17,7 +17,7 @@ int main()
 {
     // 2 diff ways to new Line/EndL?
     std::cout << "Hello World!\n" << std::endl;
-    system("pause>0");
-    std::cin.get();
+    system("pause>0"); //way 1 to pause
+    std::cin.get(); //way 2 to pause
     return 0;
 }

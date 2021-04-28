@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# FIX: Permission denied
+#fatal: Unable to process path 01_testProject/.vs/01_testProject/v16/Browse.VC.opendb
+.opendb
+.opensdf
+*.opendb

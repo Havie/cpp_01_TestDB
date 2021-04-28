@@ -13,6 +13,8 @@
 
 //SRC Control add: *.opensdf and * .opendb to fix fatalError to gitignore
 
+
+// TUTORIAL 10hour:  https://www.youtube.com/watch?v=GQp1zzTwrIg
 int main()
 {
     // 2 diff ways to new Line/EndL?

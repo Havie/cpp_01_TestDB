@@ -21,32 +21,61 @@ using namespace std; //Stop having to do std::cout
 
 #include <iostream>
 #include <list>
+#include <string> //Required for getLine()
 
 
 
 class YoutubeChannel
 {
 private:
-	string Name;
-
+	string name_;
+	int subscribers_;
+protected:
+		int numVideos_;
 public:
 	YoutubeChannel(string name) 
 	{
-		Name = name;
+		name_ = name;
+		subscribers_ = 0;
+	}
+	void Subscribe()
+	{
+		++subscribers_;
 	}
 	void GetInfo()
 	{
-		cout << "Your Channels name is: " << Name << endl;
+		cout << "Your Channels name is: " << name_ << endl;
+		cout << "You have : " << subscribers_ << " subscribers" << endl;
+	}
+
+};
+
+//public in front of intheritance means it copies all the same public functions? idk why it wouldnt..?
+class CookingYoutubeChannel : public YoutubeChannel
+{
+public:
+	CookingYoutubeChannel(string name, int numVideos):YoutubeChannel(name)
+	{
+		numVideos_ = numVideos;
 	}
 
 };
 
 int main()
 {
-	YoutubeChannel myChannel("SuperCoolChannel");
+	string channelName;
+	cout << "Enter Youtube Channel Name: ";
+	// How to get a line with white spaces
+	getline(cin, channelName);
+
+	YoutubeChannel myChannel(channelName);
+	myChannel.Subscribe();
 	myChannel.GetInfo();
 
-
+	CookingYoutubeChannel cookingChannel("cooking Things 420" , 100);
+	cookingChannel.Subscribe();
+	cookingChannel.Subscribe();
+	cookingChannel.GetInfo();
 
 
 	cout << "\n";

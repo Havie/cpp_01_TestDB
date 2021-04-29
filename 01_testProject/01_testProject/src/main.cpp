@@ -36,6 +36,29 @@ int main()
     cout << sizeof(long) << " .. is byte size of long  and max val is : " << numeric_limits<long>::max() << endl;
     cout << sizeof(bool) << " .. is byte size of bool  and max val is : " << numeric_limits<bool>::max() << endl;
     //system("pause>0"); // pause prints the press any key message, the > tells it to redirect output to a file, 0 is the name of the file to redirect to
-    cin.get(); //way 2 to pause
+
+    //Get multiple inputs:
+    float a, b, c;
+    cout << "give me a,b,c: ";
+    cin >> a >> b >> c;
+
+    if (a == b && b == c)
+    {
+        cout << "All the same #s!" << endl;
+    }
+    else
+    {
+        cout << "Not all equal .. "  << endl;;
+    }
+
+    // Swap vars without temp:
+    //IF a= 20 and b = 10
+    cout << "Going to Swap " <<endl << "a= " << a << " b= " << b << endl;
+    a = a + b; //30
+    b = a - b; //20
+    a = a - b; //10
+    cout << "a= " << a << " b= " << b << endl;
+
+    cin.get(); //way to pause
     return 0;
 }

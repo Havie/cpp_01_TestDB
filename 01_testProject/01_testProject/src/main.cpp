@@ -18,28 +18,41 @@ using namespace std; //Stop having to do std::cout
 // TUTORIAL 10hour:  https://www.youtube.com/watch?v=GQp1zzTwrIg
 
 ///C++ member vars end w _ 
-float playerOneNum_;
-float playerTwoNum_;
+
 
 int main()
 {
-	// 2 diff ways to new Line/EndLine
-	//cout << "Enter annualSalary.. \n" << endl;
+	int year, month;
+	cout << "Enter Year, Month: ";
+	cin >> year >> month;
 
-	bool isRunning = true;
-	cout << "player 1 enter a # : ";
-	cin >> playerOneNum_;
-	system("cls"); //Clear console for 2nd p;ayer to not see
-	while (isRunning)
+	//Idk what we were doing here?
+	switch (month)
 	{
-		cout << "player 2 enter a # : ";
-		cin >> playerTwoNum_;
-
-		isRunning = playerTwoNum_ != playerOneNum_;
-		isRunning ? cout <<  "You failed to pick the same numbers\n" : cout << "You picked the same # !\n";
+		case 2:
+		{
+			(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ?
+				cout << "29 day month. " : cout << "28 day month.  ";
+			break;
+		}
+		case 4:
+		{
+			break;
+		}
+		case 6:
+		{
+			break;
+		}
+		case 11:
+		{
+			cout << "30 day month. ";
+			break;
+		}
+		case 12: cout << "31 day month."; break;
+		default:  cout << "Can also do this with no curly brackes..."; break;
 	}
 
-	cout << "GameOver!";
+	cout << "\n";
 
 	cin.get(); //way to pause
 	return 0;

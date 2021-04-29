@@ -19,28 +19,32 @@ using namespace std; //Stop having to do std::cout
 
 ///C++ member vars end w _ 
 
-#include <iomanip> //allows a setw() which inserts empty space?
+#include <iostream>
+#include <list>
+
+
+
+class YoutubeChannel
+{
+private:
+	string Name;
+
+public:
+	YoutubeChannel(string name) 
+	{
+		Name = name;
+	}
+	void GetInfo()
+	{
+		cout << "Your Channels name is: " << Name << endl;
+	}
+
+};
 
 int main()
 {
-	int height, width;
-	cout << "Enter height , width: \n ";
-	cin >> height >> width;
-	char symbol;
-	cout << "Enter Symbol: \n";
-	cin >> symbol;
-	cout << endl;
-	cout << "Drawing..";
-	cout << endl;
-
-	for (int i = 0; i < height; i++)
-	{
-		for (int j = 0; j < width; j++)
-		{
-			cout << setw(3) << symbol;
-		}
-		cout << endl;
-	}
+	YoutubeChannel myChannel("SuperCoolChannel");
+	myChannel.GetInfo();
 
 
 

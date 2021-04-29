@@ -19,38 +19,31 @@ using namespace std; //Stop having to do std::cout
 
 ///C++ member vars end w _ 
 
+#include <iomanip> //allows a setw() which inserts empty space?
 
 int main()
 {
-	int year, month;
-	cout << "Enter Year, Month: ";
-	cin >> year >> month;
+	int height, width;
+	cout << "Enter height , width: \n ";
+	cin >> height >> width;
+	char symbol;
+	cout << "Enter Symbol: \n";
+	cin >> symbol;
+	cout << endl;
+	cout << "Drawing..";
+	cout << endl;
 
-	//Idk what we were doing here?
-	switch (month)
+	for (int i = 0; i < height; i++)
 	{
-		case 2:
+		for (int j = 0; j < width; j++)
 		{
-			(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ?
-				cout << "29 day month. " : cout << "28 day month.  ";
-			break;
+			cout << setw(3) << symbol;
 		}
-		case 4:
-		{
-			break;
-		}
-		case 6:
-		{
-			break;
-		}
-		case 11:
-		{
-			cout << "30 day month. ";
-			break;
-		}
-		case 12: cout << "31 day month."; break;
-		default:  cout << "Can also do this with no curly brackes..."; break;
+		cout << endl;
 	}
+
+
+
 
 	cout << "\n";
 

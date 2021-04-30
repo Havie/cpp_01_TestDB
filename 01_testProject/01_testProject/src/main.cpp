@@ -22,6 +22,7 @@
 #include <iostream>
 #include <process.h>
 #include <iostream>
+#include "YoutubeChannel.h"
 #include <list>
 #include <string> //Required for getLine() , because namespace std doesnt import it all? https://en.cppreference.com/w/cpp/header/string 
 // this is the entire file for #include<string>
@@ -39,30 +40,7 @@
 //using namespace std;  this is "bad" practice
 
 
-class YoutubeChannel
-{
-private:
-	std::string name_;
-	int subscribers_;
-protected:
-		int numVideos_;
-public:
-	YoutubeChannel(std::string name)
-	{
-		name_ = name;
-		subscribers_ = 0;
-	}
-	void Subscribe()
-	{
-		++subscribers_;
-	}
-	void GetInfo()
-	{
-		std::cout << "Your Channels name is: " << name_ << std::endl;
-		std::cout << "You have : " << subscribers_ << " subscribers" << std::endl;
-	}
 
-};
 
 //public in front of intheritance means it copies all the same public functions? idk why it wouldnt..?
 class CookingYoutubeChannel : public YoutubeChannel

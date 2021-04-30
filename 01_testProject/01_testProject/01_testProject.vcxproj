@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\CookingYoutubeChannel.h" />
     <ClInclude Include="src\main.h" />
     <ClInclude Include="src\YoutubeChannel.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\CookingYoutubeChannel.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\YoutubeChannel.cpp" />
   </ItemGroup>

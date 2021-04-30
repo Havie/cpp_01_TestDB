@@ -3,9 +3,11 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\YoutubeChannel.cpp" />
+    <ClCompile Include="src\CookingYoutubeChannel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\main.h" />
     <ClInclude Include="src\YoutubeChannel.h" />
+    <ClInclude Include="src\CookingYoutubeChannel.h" />
   </ItemGroup>
 </Project>

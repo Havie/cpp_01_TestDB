@@ -23,6 +23,7 @@
 #include <process.h>
 #include <iostream>
 #include "YoutubeChannel.h"
+#include "CookingYoutubeChannel.h"
 #include <list>
 #include <string> //Required for getLine() , because namespace std doesnt import it all? https://en.cppreference.com/w/cpp/header/string 
 // this is the entire file for #include<string>
@@ -42,16 +43,6 @@
 
 
 
-//public in front of intheritance means it copies all the same public functions? idk why it wouldnt..?
-class CookingYoutubeChannel : public YoutubeChannel
-{
-public:
-	CookingYoutubeChannel(std::string name, int numVideos):YoutubeChannel(name)
-	{
-		numVideos_ = numVideos;
-	}
-
-};
 
 int main()
 {

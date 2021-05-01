@@ -60,6 +60,20 @@ int main()
 	cookingChannel.Subscribe();
 	cookingChannel.GetInfo();
 
+	//Pointers:
+	int n = 5;
+	std::cout <<" 1st: " << &n << std::endl; // &n = mem address
+	int* ptr = &n;
+	std::cout << " 2nd: " << ptr << std::endl; //&n stored inside a pointer = mem address
+	std::cout << " 3rd: " << *ptr << std::endl; //* called again on a pointer reverses it and dereferences to show value at mem address
+	std::cout << " 4th: " << &ptr << std::endl; //& on a pointer tells the mem address where this pointer is stored?? silly
+
+	//How to set up a pointer from an obj
+	YoutubeChannel* yt1Pointer = &myChannel;
+	YoutubeChannel* yt2Pointer = &cookingChannel;
+
+	//How to dereference and use a pointer like an obj. use -> instead of . 
+	yt1Pointer->GetInfo();
 
 	std::cout << "\n";
 
